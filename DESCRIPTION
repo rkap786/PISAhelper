@@ -1,0 +1,9 @@
+Package: PISAhelper
+Title: Testing for Scaling GxE
+Version: 0.1
+Authors@R: person("Ben", "Domingue", email = "ben.domingue@gmail.com",
+                  role = c("aut", "cre"))
+Description: Package to detect scaling GxE.
+Depends: R (>= 3.1.0), 
+License:
+LazyData: true
