@@ -46,8 +46,9 @@ irt<-function(x,lmer.flag=FALSE ,model="2PL") {
     #   filter(mean>0.98)
     # 
     #problematic - 
-    s <- 'F = 1-100
-      PRIOR = (1-100, a1, lnorm, 0, 2), ((1-100, d, norm, 0, 2))'
+      ni<-ncol(resp)-1
+      s <- paste('F = 1-',ni,'
+      PRIOR = (1-',ni,', a1, lnorm, 0, 2), ((1-',ni,', d, norm, 0, 2))',sep='')
     model=mirt.model(s)
     
         m<-mirt(resp[,-index],1,itemtype = "2PL",
