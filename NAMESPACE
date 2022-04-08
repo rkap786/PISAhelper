@@ -1,5 +1,5 @@
 export(
 	"plotSAT","irt","interplay",
-	"simdata","getcaf","integrate"
+	"simdata","getcaf","getcaf0","integrate"
 )
 
