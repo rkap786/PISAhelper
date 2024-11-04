@@ -97,8 +97,8 @@ scorediff = function(x, deg=2) {
   a3c = intdiff_th2 - intdiff_th1
   a4s= intdiff_t2h - intdiff_t1h
   score_diff = M[[2]]-M[[1]]
-  est_diff = intdiff_t2h2 - intdiff_t1h1
+  #est_diff = intdiff_t2h2 - intdiff_t1h1
   
-  return(c("actualdiff"=score_diff, "est diff"=est_diff, "a_c"=a3c, "a_s"=a4s))
+  return(c("actualdiff"=score_diff, "a_c"=a3c, "a_s"=a4s))
 }
 
