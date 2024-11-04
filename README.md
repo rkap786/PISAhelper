@@ -19,6 +19,10 @@ Please note important functions in the R sub-folder as under:
 These functions can be used to recreate the simulation results from the paper as follows:
 
 ```
+
+### Load package
+library(PISAhelper)
+
 ### Generate data
 speed.offset= 0.5
 th.offset= 0.5
