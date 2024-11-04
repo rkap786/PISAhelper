@@ -1,4 +1,6 @@
-This is code related to the paper, **"Differences in Time Usage as a Competing Hypothesis for Observed Group Differences in Accuracy with an Application to Observed Gender Differences in PISA Data"**, paper [here](https://onlinelibrary.wiley.com/doi/10.1111/jedm.12419). The code in this repository can be used to create the R package PISAhelper, which contains functions to recreate the results from the simulations in the paper. These functions can also be used on empirical datasets. In the paper, the functions were using for PISA 2018 reading fluency and science items. 
+This is code related to the paper, **"Differences in Time Usage as a Competing Hypothesis for Observed Group Differences in Accuracy with an Application to Observed Gender Differences in PISA Data"**, paper [here](https://onlinelibrary.wiley.com/doi/10.1111/jedm.12419). 
+
+The code in this repository can be used to create the R package PISAhelper, which contains functions to recreate the results from the simulations in the paper -- the package can be used to simulate a dataset, calculate observed group score differences, and estimate group score differences due to capacity ($A_c$), and group score differences due to speed ($A_s$). These functions can also be used on empirical datasets. In the paper, the functions were using for PISA 2018 reading fluency and science items. 
 
 ### Installing the package
 The package can be installed as under:
@@ -53,7 +55,7 @@ as= intdiff_t2h - intdiff_t1h ## Overall CAF integrated over group 2's response 
 
 ```
 
-The score differences A, A_c and $A_s$ can also be directly retreived using the function scorediff() as follows:
+The score differences A, $A_c$ and $A_s$ can also be directly retreived using the function scorediff() as follows:
 
 ```
 scorediff(x) ## Returns A, A_c & A_s given data file x
