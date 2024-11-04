@@ -52,3 +52,9 @@ as= intdiff_t2h - intdiff_t1h ## Overall CAF integrated over group 2's response 
 
 
 ```
+
+The score differences A, A_c and $A_s$ can also be directly retreived using the function scorediff() as follows:
+
+```
+scorediff(x) ## Returns A, A_c & A_s given data file x
+```
