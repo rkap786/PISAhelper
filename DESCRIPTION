@@ -1,9 +1,10 @@
 Package: PISAhelper
 Title: Testing for Scaling GxE
 Version: 0.1
-Authors@R: person("Ben", "Domingue", email = "ben.domingue@gmail.com",
+Version: 0.1
+Authors@R: person("Radhika", "Kapoor", email = "rkap786@stanford.edu",
                   role = c("aut", "cre"))
-Description: Package to detect scaling GxE.
+Description: Package for simulation analysis for group score differences
 Depends: R (>= 3.1.0), 
 License:
 LazyData: true
