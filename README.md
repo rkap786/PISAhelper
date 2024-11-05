@@ -20,8 +20,10 @@ These functions can be used to recreate the simulation results from the paper as
 
 ```
 
+
 ### Load package
 library(PISAhelper)
+library(fixest)
 
 ### Generate data
 speed.offset= 0.5
