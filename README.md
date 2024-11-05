@@ -30,8 +30,7 @@ rho= 0.25
 N=1000
 b.time= 0.5 #upward sloping CAF
 nitems= 45
-x<-simdata(speed.offset=speed.offset,th.offset=th.offset,
-               N=N,rho=r, b.time=b.time, nitems=nitems) ## generate data
+c
 
 x1= x |> filter(group==1) ## Group 1 data
 x2= x |> filter(group==2) ## Group 2 data
