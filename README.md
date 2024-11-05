@@ -30,14 +30,15 @@ rho= 0.25
 N=1000
 b.time= 0.5 #upward sloping CAF
 nitems= 45
+
 x<-simdata(speed.offset=speed.offset,th.offset=th.offset,
-               N=N,rho=r, b.time=b.time, nitems=nitems) ## generate data
+           N=N,rho=rho, b.time=b.time, nitems=nitems) ## generate data
 
 x1= x |> filter(group==1) ## Group 1 data
 x2= x |> filter(group==2) ## Group 2 data
     
 M<-by(x$resp,x$group,mean) # get observed differences in mean group scores 
-A = group2-group1 # the observed group mean score difference
+A = M[[2]]- M[[1]] # the observed group mean score difference
 
 caf = getcaf_deg(x, deg=2) # Get CAF for each group
 caf0= getcaf0_deg(x, deg=2) # Get overall CAF for both groups
