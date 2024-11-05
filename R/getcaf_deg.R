@@ -1,5 +1,9 @@
 getcaf_deg= function (x, deg=2) 
 {
+  list.of.packages=c('fixest', 'splines')
+  new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+  if(length(new.packages)) install.packages(new.packages)
+  
   library(splines)
   tmp.bs <- bs(x$rt, degree = deg)
   for (i in 1:ncol(tmp.bs)) x[[paste("bs", i, sep = "")]] <- tmp.bs[, 
