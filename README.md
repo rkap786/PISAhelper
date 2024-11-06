@@ -6,6 +6,13 @@ The code in this repository can be used to create the R package PISAhelper, whic
 The package can be installed as under:
 
 ```
+## Install necessary packages
+list.of.packages=c('kdensity', 'MASS', 'splines', 'dplyr', 'fixest', 'devtools')
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
+```
+library(devtools)
 devtools::install_github("rkap786/PISAhelper", ref="main")
 ```
 
@@ -21,11 +28,13 @@ These functions can be used to recreate the simulation results from the paper as
 ```
 
 
-### Load package
+### Load packages
 library(PISAhelper)
 library(fixest)
+library(dplyr)
 
 ### Generate data
+set.seed(123)
 speed.offset= 0.5
 th.offset= 0.5
 rho= 0.25
@@ -34,7 +43,7 @@ b.time= 0.5 #upward sloping CAF
 nitems= 45
 
 x<-simdata(speed.offset=speed.offset,th.offset=th.offset,
-           N=N,rho=rho, b.time=b.time, nitems=nitems) ## generate data
+           N=N,rho=rho, b.time=b.time, nitems=nitems) ## generate data: each row 
 
 x1= x |> filter(group==1) ## Group 1 data
 x2= x |> filter(group==2) ## Group 2 data
