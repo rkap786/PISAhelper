@@ -7,10 +7,6 @@
 
 scorediff = function(x, deg=2) {
   
-  list.of.packages=c('kdensity', 'MASS', 'splines')
-  new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-  if(length(new.packages)) install.packages(new.packages)
-  
   library(PISAhelper)
   # source("/Users/radhika/Google Drive Stanford/PISA gender/Final code files/Code/PISAhelper-additional/R/getcaf_deg.R")
   # source("/Users/radhika/Google Drive Stanford/PISA gender/Final code files/Code/PISAhelper-additional/R/getcaf0_deg.R")
