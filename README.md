@@ -11,7 +11,7 @@ list.of.packages=c('kdensity', 'MASS', 'splines', 'dplyr', 'fixest', 'devtools')
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
-```
+### Install PISAhelper from github
 library(devtools)
 devtools::install_github("rkap786/PISAhelper", ref="main")
 ```
