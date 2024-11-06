@@ -1,10 +1,8 @@
 getcaf_deg= function (x, deg=2) 
 {
-  list.of.packages=c('fixest', 'splines')
-  new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-  if(length(new.packages)) install.packages(new.packages)
   
   library(splines)
+  library(fixest)
   tmp.bs <- bs(x$rt, degree = deg)
   for (i in 1:ncol(tmp.bs)) x[[paste("bs", i, sep = "")]] <- tmp.bs[, 
                                                                     i]
@@ -12,9 +10,7 @@ getcaf_deg= function (x, deg=2)
   for (i in 1:deg) expr = paste0(expr, "bs", i, " +")
   expr = substr(expr,1,nchar(expr)-2)
   caf <- list()
-  library(fixest)
-  #ran <- quantile(x$rt, c(0.01, 0.99), na.rm = TRUE)
-  ran= c(min(x$rt), max(x$rt))
+    ran= c(min(x$rt), max(x$rt))
   for (i in 1:2) {
     xx <- x[x$group == i, ]
     regexp = as.formula(paste("resp ~", expr, "| item+id"))
